@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>NNERPP Data Visualization</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css">
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<script type="text/javascript" src="js/popQuiz1.js"></script>
+		<script type="text/javascript" src="js/popQuiz2.js"></script>
+		<script type="text/javascript" src="js/popQuiz3.js"></script>
+
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<script type="text/javascript">
+
+			/* Defines the options for the second question in the pop quiz. */
+			var options2 = {
+				title: 'Question #2',
+				is3D: true,
+				pieStartAngle: 0,
+				colors: ['#1E97FC', '#21C225', '#FEE335', '#E21B1C', '#FD50F0', '#8C50FB']
+			};
+
+			/* Defines the options for the second question in the pop quiz. */
+			var options3 = {
+				title: 'Question #3',
+				colors: ['#1E97FC', '#21C225', '#FEE335', '#E21B1C', '#FD50F0', '#8C50FB']
+			};
+
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- Title Slide -->
+				<section>
+					<h3>Guiding principles for effective data visualization</h3>
+					<h5><a href="mailto:william@williambuchanan.net?subject=Follow up From NNERPP Talk">William R. Buchanan, Ph.D.</a></h5>
+					<h5><a href="https://www.fcps.net/Domain/2284" target="_blank">Director, Office of Grants, Research, Accountability, &amp; Data</a></h5>
+					<h5><a href="https://www.fcps.net" target="_blank">Fayette County Public Schools</a></h5>
+				</section>
+
+				<!-- Speaker background info -->
+				<section>
+					<section>
+						<h2>Background</h2>
+						<aside class="notes">
+							<ul>
+								<li>This is really just about giving folks an understanding of why I am talking at them</li>
+								<li>Be sure to mention the connection to Matt Linick</li>
+								<li></li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<ul>
+							<li>Developed <a href="https://github.com/wbuchanan/MSASExplorer" target="_blank">Interactive Data Visualization tools for Accountability Reporting</a></li>
+							<li>Developed a program to <a href="https://github.com/wbuchanan/eda" target="_blank">automate exploratory data analysis in Stata</a></li>
+							<li>Developed the <a href="https://github.com/wbuchanan/brewscheme" target="_blank">brewscheme toolkit in Stata</a> for aesthetics and accessibility of data visualizations</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Strategic Data Project Data Fellow (Cohort 5) at Mississippi Department of Education</li>
+								<li>Data Scientist at Minneapolis Public Schools</li>
+								<li>Currently Director of Grants, Research, Accountability, &amp; Data at <a href="https://fcps.net" target="_blank">FCPS</a></li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section data-autoslide="3500">
+						<h3>What is the purpose of data visualization?</h3>
+					</section>
+
+					<section>
+						<ul>
+							<li>Explore</li>
+							<li class="fragment" data-autoslide="5000">Expose</li>
+							<li class="fragment">Explain</li>
+						</ul>
+						<aside class="notes">
+							<ol>
+								<li>Think of explore like exploratory data analysis or the getting to know you phase of life with your data</li>
+								<li>Think of expose along the lines of uncovering something new about the same data and/or artistic uses of data (e.g., data sculpting)</li>
+								<li>Explain is the part that is probably most important to all of us on the call today and is probably what we all want to know how to do most effectively.</li>
+							</ol>
+						</aside>
+					</section>
+
+					<section data-autoslide="2500">
+						<h3>What is communication?</h3>
+					</section>
+
+					<section>
+						<!-- Communications Model Diagram -->
+						<img src="img/communicationsModel.svg" border="0">
+						<aside class="notes">
+							<p>This diagram is based on a fairly old model of communications developed by Shannon, C. E. (1948).  A mathematical theory of communication.  The Bell System Technical Journal, 27, pp. 379-423.  In Shannon’s case, this was a very literal translation of telecommunications, but still provides a useful framework for thinking about the process of communication (at least enough to the point where the paper has been cited > 80k times based on Google’s count).</p>
+							<p>Path A is the message as we (the transmitter) perceive/understand it.</p>
+							<p>Path B shows our effort to send this message to some recipients.</p>
+							<p>Path C is the message that the target of our communications receives.</p>
+							<p>Path D is the message as the target of the communications understands/perceives it.</p>
+							<p>In our particular case, purpose (e.g., communicating with stakeholders, communicating with C-Suite, communicating w/other data geeks, etc…) will mediate the process.  However, we can use this framework to help us think through decisions along the way.</p>
+						</aside>
+					</section>
+
+					<section>
+						<h3>How does the visualization process get us there?</h3>
+					</section>
+
+					<section>
+						<!-- Jeff Heer Adapted Slide -->
+						<img src="img/dataVizGenerationProcess.svg" border="0">
+						<aside class="notes">
+							<p>Slide adopted from:</p>
+							<p>Heer, J. (2015).  <em>Effective Data Visualization</em>.  Retrieved on 23aug2019; Retrieved from: http://homes.cs.washington.edu/~jheer/talks/Heer-EffectiveDataVisualization.pdf.  </p>
+							<p>Won’t be able to focus on everything, but we’ll try to address some of the bigger issues that affect the efficacy of data visualizations.  By starting with measurement scales, we can actually address quite a bit of information related to creating effective visualizations.  It will not only give us constraints that we can use to guide decisions related to visualizations, but will also provide a foundation we can use to think about issues related to dimensionality, how we map the data to visual representations, and ultimately how this translates to a data visualization.</p>
+							<p>Although this framework places data and mapping in different parts of the process they are to some degree inseparable.  So, if it seems like I'm bouncing back and forth between the two it is a combination of trying to address the relationships between the topics and a reflection of the iterative nature of creating data visualizations. </p>
+						</aside>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-autoslide="2500">
+						<h2>Pop Quiz</h2>
+					</section>
+
+					<section>
+						<h3>Go to: <a href="PollEv.com/billybuchana011" target="_blank"></a>PollEv.com/billybuchana011</h3>
+						<h4>OR</h4>
+						<h3>Text <strong>BILLYBUCHANA011</strong> to <strong>22333</strong> to connect</h3>
+						<aside class="notes">
+							<ul>
+								<li>Remind them that the number is 0 and the end is 1</li>
+								<li>Make sure everyone is able to connect before advancing</li>
+								<li>Explain that the results will be shown after the questions and that all data is anonymous</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h4>Q1. Which slice in this pie chart is the <strong>SECOND</strong> largest?</h4>
+						<div id="popQuiz1" style="width: 95vw; height: 100%;"></div>
+					</section>
+
+					<section>
+						<h4>Q2. Which slice in this pie chart is the <strong>SECOND</strong> largest?</h4>
+						<div id="popQuiz2"></div>
+					</section>
+
+					<section>
+						<h4>Q3. Which bar is the <strong>SECOND</strong> largest?</h4>
+						<div id="popQuiz3"></div>
+					</section>
+
+					<!-- Placeholder for first pollAnywhere results -->
+					<section>
+						<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/Bd4XTuLIy3sgUn6Polq1t?controls=none&short_poll=true" width="800" height="600" frameBorder="0"></iframe>
+					</section>
+
+				</section>
+
+				<section>
+
+					<section data-autoslide="3500">
+						<h3>What advice do I have for visualizing data?</h3>
+					</section>
+
+					<section>
+						<ul>
+							<li><strong>Never</strong> obfuscate the message.</li>
+							<li>Establish clear and consistent standards for visual encodings.</li>
+							<li>Bind relevant information in the UI without blocking the user's view.</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Will show examples, but a good one is bars to show delta over time</li>
+								<li></li>
+								<li></li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</aside>
+					</section>
+
+				</section>
+
+
+
+
+				<section>
+
+				</section>
+
+
+
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				autoSlideStoppable: false,
+				defaultTiming: 180,
+				transitionSpeed: 'slow',
+				viewDistance: 7,
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
