@@ -189,20 +189,163 @@
 
 					<section>
 						<ul>
+							<li>Mapping between visual and measurement scales should be one and the same.</li>
 							<li>Do not alienate potential end-users.</li>
 							<li><strong>Never</strong> obfuscate the message.</li>
-							<li>Mapping between visual and measurement scales should be one and the same.</li>
 							<li>Establish clear and consistent standards for visual encodings.</li>
 							<li>Bind helpful information in the UI without blocking the user's view.</li>
 						</ul>
 						<aside class="notes">
 							<ul>
-								<li>Will show examples, but a good one is bars to show delta over time</li>
+								<li>I'm going to show a bunch of examples related to these points in the hopes that it will clarify things and make some of the most abstract concepts a bit more concrete.</li>
 								<li></li>
 								<li></li>
 							</ul>
 						</aside>
 					</section>
+				</section>
+
+				<section>
+
+					<section>
+						<h4>Mapping between visual and measurement scales should be one and the same</h4>
+						<aside class="notes">
+							<ul>
+								<li>Anyone have any ideas about what I might mean by this statement?</li>
+								<li>Why should you care about alignment of measurement/visual scales?</li>
+								<li>Mention that visual scales and measurement scales sometimes have different names.</li>
+								<li>You're going to see what will seem to be unconventional practices, but that is because a lot of these principles get thrown to the wayside for the sake of comfort and familiarity.</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h4>Nominal Scale</h4>
+						<ul>
+							<li>Used for categories that have no natural order.</li>
+							<li>Can only test equality and inequality.</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Ask if anyone can think of any examples.</li>
+								<li>Ex: School Names, Demographic groups, Subject areas, etc...</li>
+								<li>Defined by three axoms</li>
+								<li>Either a == b or a != b (testing equality/inequality)</li>
+								<li>If a == b then b == a (defines set equivalence in two categories)</li>
+								<li>If a == b and b == c then a == c (extends set equivalence to multiple categories)</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h4>Ordinal Scales</h4>
+						<ul>
+							<li>Used for categories that have a natural order.</li>
+							<li>Can test for equality/inequality.</li>
+							<li>Can test order of magnitude.</li>
+							<li>No other mathematical operators are defined on this scale.</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Ask if anyone can think of any examples.</li>
+								<li>Ex: Strongly Disagree to Strongly Agree, Rankings, Letter Grades, etc...</li>
+								<li>In addition to nominal scale properties, two additional axoms are added</li>
+								<li>If a > b then b !>= a</li>
+								<li>If a > b and b > c then a > c (defines ordering of values)</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h4>Intervallic Scales</h4>
+						<ul>
+							<li>Used in cases where there is no true zero or where the location of zero is arbitrary.</li>
+							<li>Can test for equality/inequality.</li>
+							<li>Can test order of magnitude.</li>
+							<li>Mathematical operations are defined on this scale.</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Ask if anyone can think of any examples.</li>
+								<li>Ex: Z scores, Weight of humans, scaled scores (derived from Rasch), etc....</li>
+								<li>Builds on the ordinal scale and adds three additional axoms</li>
+								<li>a + b == b + a (Commutative property)</li>
+								<li>If a == c & b == d then a + b == c + d (Property of Equality)</li>
+								<li>(a + b) + c == a + (b + c) (Associative Property)</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h4>Ratio Scales</h4>
+						<ul>
+							<li>Used when there is a true zero or when the location of zero is fixed.</li>
+							<li>Has all of the same prop</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>Ask if anyone can think of any examples.</li>
+								<li>Ex: % of budget remaining, # of sections offered, Raw Scores</li>
+								<li>Adds the last two axoms</li>
+								<li>a + 0 == a (defines true zero value as the absence of the quantity)</li>
+								<li>If a == c and b > 0 then a + b > c (defines the location of 0 to be fixed)</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<h4>Visual Scales</h4>
+						<table style="border-spacing: 4px; border-collapse: separate;">
+							<thead>
+								<td>Visual Scale type</td>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Qualitative</td>
+									<td style="background-color: red; border-color: white; border: 2px; color: black;">5</td>
+									<td style="background-color: orange; border-color: white; border: 2px; color: black;">1</td>
+									<td style="background-color: yellow; border-color: white; border: 2px; color: black;">4</td>
+									<td style="background-color: green; border-color: white; border: 2px; color: black;">2</td>
+									<td style="background-color: blue; border-color: white; border: 2px;">3</td>
+								</tr>
+								<tr>
+									<td>Sequential</td>
+									<td style="background-color: #eff3ff; border-color: white; border: 1px; color: black;">1</td>
+									<td style="background-color: #bdd7e7; border-color: white; border: 1px; color: black;">2</td>
+									<td style="background-color: #6baed6; border-color: white; border: 1px;">3</td>
+									<td style="background-color: #3182bd; border-color: white; border: 1px;">4</td>
+									<td style="background-color: #08519c; border-color: white; border: 1px;">5</td>
+								</tr>
+								<tr>
+									<td>Diverging</td>
+									<td style="background-color: #e66101; border-color: white; border: 1px;">-2</td>
+									<td style="background-color: #fdb863; border-color: white; border: 1px; color: black;">-1</td>
+									<td style="background-color: #f7f7f7; border-color: white; border: 1px; color: black;">0</td>
+									<td style="background-color: #b2abd2; border-color: white; border: 1px; color: black;">1</td>
+									<td style="background-color: #5e3c99; border-color: white; border: 1px;">2</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<aside class="notes">
+							<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</aside>
+					</section>
+
+					<section>
+						<!-- Section to discuss some visual scales that they've likely seen and what the effects are. --!
+
+					</section>
+
 				</section>
 
 				<section>
@@ -344,29 +487,6 @@
 
 					<section>
 						<h3>NEVER obfuscate the message</h3>
-					</section>
-
-					<section>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
-						<aside class="notes">
-							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-						</aside>
-					</section>
-
-				</section>
-
-				<section>
-
-					<section>
-						<h4>Mapping between visual and measurement scales should be one and the same</h4>
 					</section>
 
 					<section>
