@@ -16,7 +16,12 @@
 		<script type="text/javascript" src="js/popQuiz1.js"></script>
 		<script type="text/javascript" src="js/popQuiz2.js"></script>
 		<script type="text/javascript" src="js/popQuiz3.js"></script>
-
+        <script type="text/javascript" src="js/obfuscatingEx1.js"></script>
+        <script type="text/javascript" src="js/obfuscatingEx2.js"></script>
+        <script type="text/javascript" src="js/obfuscatingEx3.js"></script>
+        <script type="text/javascript" src="js/obfuscatingEx4.js"></script>
+		<script type="text/javascript" src="js/obfuscatingEx5.js"></script>
+		<script type="text/javascript" src="js/obfuscatingEx6.js"></script>
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -192,13 +197,13 @@
 							<li>Mapping between visual and measurement scales should be one and the same.</li>
 							<li>Do not alienate potential end-users.</li>
 							<li><strong>Avoid</strong> obfuscating the message.</li>
-							<li>Establish clear and consistent standards for visual encodings.</li>
 							<li>Bind helpful information in the UI without blocking the user's view.</li>
+							<li>Establish clear and consistent standards for visual encodings.</li>
 						</ul>
 						<aside class="notes">
 							<ul>
 								<li>I'm going to show a bunch of examples related to these points in the hopes that it will clarify things and make some of the most abstract concepts a bit more concrete.</li>
-								<li></li>
+								<li>Explain how the last bullet is really more or less incorporated by reference.</li>
 								<li></li>
 							</ul>
 						</aside>
@@ -579,6 +584,7 @@
 						<ul>
 							<li>What types of comparisons are easy for humans to perceive?</li>
 							<li>What element do you want/need end users to focus on?</li>
+							<li>How does your choice of graph/chart support/hinder that comparison?</li>
 						</ul>
 						<aside class="notes">
 							<ul>
@@ -591,24 +597,82 @@
 
 					<!-- Understanding the message you intend to send -->
 					<section>
-						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
-						</ul>
+                        <div id="obfuscating1" style="width: 90%; height: 600px;"></div>
 						<aside class="notes">
 							<ul>
-								<li></li>
+								<li>Sizes of the bubbles are : 5, 7.5, 10, 20, 40, 50 in pixels</li>
 								<li></li>
 								<li></li>
 							</ul>
 						</aside>
 					</section>
 
+					<section>
+						<div id="obfuscating6" style="width: 90%; height: 600px;"></div>
+						<aside class="notes">
+							<ul>
+								<li>How many have seen and/or made a graph like this before?</li>
+								<li>How easy is it to identify the amount of change for the blue or orange bars?</li>
+							</ul>
+						</aside>
+					</section>
 
+					<section>
+						<div id="obfuscating5" style="width: 90%; height: 600px;"></div>
+						<aside class="notes">
+							<ul>
+								<li>Does this effectively communicate change over time?</li>
+								<li>What does an end user need to see or perceive in order to interpret change over time?</li>
+								<li>How different is the dropout rate between 2014 and 2015?</li>
+							</ul>
+						</aside>
+					</section>
 
-				</section>
+					<section>
+                        <div id="obfuscating2" style="width: 90%; height: 600px;"></div>
+                        <aside class="notes">
+                            <ul>
+								<li>Area charts are not really much different from bar charts, but they do have one major difference.</li>
+								<li>What is the difference between the area chart and the stacked bar graph?  Answer: The Area Chart includes a visual representation of the slope.</li>
+                                <li>While it is typically recommended to start the y-axis at 0, sometimes this makes it much more challenging to identify slopes.</li>
+                                <li></li>
+                            </ul>
+                        </aside>
+                    </section>
 
+                    <section>
+                        <div id="obfuscating3" style="width: 90%; height: 600px;"></div>
+						<aside class="notes">
+							<ul>
+								<li>Rescaling the Y-axis makes it a bit easier to interpret the slopes, but there is still an issue.</li>
+								<li>Can anyone identify any of the still existing issues with this graph? Answer: because the values are summations, values that don't change over time may not have a 0 slope due to shifts in the values of other categories.</li>
+							</ul>
+						</aside>
+                    </section>
+
+                    <section>
+                        <div id="obfuscating4" style="width: 90%; height: 600px;"></div>
+						<aside class="notes">
+							<ul>
+								<li>If we instead use a line graph we can avoid all of the issues with the effect of summations on the slopes.</li>
+								<li>Using visible points, we also gain some reinforcement mechanisms related to identifying the specific magnitudes that need to be compared.</li>
+								<li></li>
+							</ul>
+						</aside>
+                    </section>
+
+					<section>
+						<h4>Takeaways</h4>
+						<ul>
+							<li>Humans + Visual Comparison of Areas = Incorrect Interpretation</li>
+							<li>To see change over time, you need to display the slopes that represent the change.</li>
+							<li>Stacked bar/area charts can be challenging to interpret due to their construction.</li>
+						</ul>
+					</section>
+
+                </section>
+
+				<!--
 				<section>
 
 					<section>
@@ -651,9 +715,9 @@
 					<section>
                         <h4>Required Elements in Visualizations</h4>
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li>Title</li>
+							<li>Axis Titles/Labels</li>
+							<li>Legend</li>
 						</ul>
 						<aside class="notes">
 							<ul>
@@ -664,21 +728,6 @@
 						</aside>
 					</section>
 
-                    <section>
-                        <h4>Reversing Axes and Dual Axes</h4>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <aside class="notes">
-                            <ul>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
-                        </aside>
-                    </section>
 
                     <section>
                         <h4>Selecting the Type of Graphs</h4>
@@ -697,6 +746,7 @@
                     </section>
 
 				</section>
+				-->
 
 				<section>
 
