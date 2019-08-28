@@ -1,8 +1,8 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width">
 
 		<title>NNERPP Data Visualization</title>
 
@@ -58,6 +58,7 @@
 				<!-- Title Slide -->
 				<section>
 					<h3>Guiding principles for effective data visualization</h3>
+					<h4>Slide Deck available at <a href="https://wbuchanan.github.io/nnerppDataVisualization/" target="_blank" style="color: #eee;">https://bit.ly/2MFU9kn</a></h4>
 					<h5><a href="mailto:william@williambuchanan.net?subject=Follow up From NNERPP Talk">William R. Buchanan, Ph.D.</a></h5>
 					<h5><a href="https://www.fcps.net/Domain/2284" target="_blank">Director, Office of Grants, Research, Accountability, &amp; Data</a></h5>
 					<h5><a href="https://www.fcps.net" target="_blank">Fayette County Public Schools</a></h5>
@@ -117,7 +118,7 @@
 
 					<section>
 						<!-- Communications Model Diagram -->
-						<img src="img/communicationsModel.svg" border="0">
+						<img src="img/communicationsModel.svg" border="0" alt="Visual adaptation of Shannon's (1948) communications model.">
 						<aside class="notes">
 							<p>This diagram is based on a fairly old model of communications developed by Shannon, C. E. (1948).  A mathematical theory of communication.  The Bell System Technical Journal, 27, pp. 379-423.  In Shannon’s case, this was a very literal translation of telecommunications, but still provides a useful framework for thinking about the process of communication (at least enough to the point where the paper has been cited > 80k times based on Google’s count).</p>
 							<p>Path A is the message as we (the transmitter) perceive/understand it.</p>
@@ -134,7 +135,7 @@
 
 					<section>
 						<!-- Jeff Heer Adapted Slide -->
-						<img src="img/dataVizGenerationProcess.svg" border="0">
+						<img src="img/dataVizGenerationProcess.svg" border="0" alt="Adaptation of Jeff Heer's (2015) framework for data visualization.">
 						<aside class="notes">
 							<p>Slide adopted from:</p>
 							<p>Heer, J. (2015).  <em>Effective Data Visualization</em>.  Retrieved on 23aug2019; Retrieved from: http://homes.cs.washington.edu/~jheer/talks/Heer-EffectiveDataVisualization.pdf.  </p>
@@ -152,7 +153,7 @@
 					</section>
 
 					<section>
-						<h3>Go to: <a href="PollEv.com/billybuchana011" target="_blank"></a>PollEv.com/billybuchana011</h3>
+						<h3>Go to: <a href="PollEv.com/billybuchana011" target="_blank">PollEv.com/billybuchana011</a></h3>
 						<h4>OR</h4>
 						<h3>Text <strong>BILLYBUCHANA011</strong> to <strong>22333</strong> to connect</h3>
 						<aside class="notes">
@@ -182,7 +183,7 @@
 
 					<!-- Placeholder for first pollAnywhere results -->
 					<section>
-						<iframe src="https://embed.polleverywhere.com/multiple_choice_polls/Bd4XTuLIy3sgUn6Polq1t?controls=all" width="800" height="600" frameBorder="0"></iframe>
+						<iframe src="https://embed.polleverywhere.com/surveys/crqGiEcn4i3JdTm1bRPM4?controls=all" width="800" height="600" frameBorder="0"></iframe>
 					</section>
 
 				</section>
@@ -196,10 +197,10 @@
 					<section>
 						<ul>
 							<li>Mapping between visual and measurement scales should be one and the same.</li>
-							<li>Do not alienate potential end-users.</li>
-							<li><strong>Avoid</strong> obfuscating the message.</li>
-							<li>Bind helpful information in the UI without blocking the user's view.</li>
-							<li>Establish clear and consistent standards for visual encodings.</li>
+							<li class="fragment" data-autoslide="3000">Do not alienate potential end-users.</li>
+							<li class="fragment" data-autoslide="3000"><strong>Avoid</strong> obfuscating the message.</li>
+							<li class="fragment" data-autoslide="3000">Bind helpful information in the UI without blocking the user's view.</li>
+							<li class="fragment">Establish clear and consistent standards for visual encodings.</li>
 						</ul>
 						<aside class="notes">
 							<ul>
@@ -218,6 +219,7 @@
 						<aside class="notes">
 							<ul>
 								<li>Anyone have any ideas about what I might mean by this statement?</li>
+								<li>Ask whether everyone is familiar with measurement scales.</li>
 								<li>Why should you care about alignment of measurement/visual scales?</li>
 								<li>Mention that visual scales and measurement scales sometimes have different names.</li>
 								<li>You're going to see what will seem to be unconventional practices, but that is because a lot of these principles get thrown to the wayside for the sake of comfort and familiarity.</li>
@@ -303,19 +305,19 @@
 						<h4>Visual Scales</h4>
 						<table style="border-spacing: 4px; border-collapse: separate;">
 							<thead>
-								<td>Visual Scale type</td>
-								<td>1</td>
-								<td>2</td>
-								<td>3</td>
-								<td>4</td>
-								<td>5</td>
+								<th>Visual Scale type</th>
+								<th>1</th>
+								<th>2</th>
+								<th>3</th>
+								<th>4</th>
+								<th>5</th>
 							</thead>
 							<tbody>
 								<tr>
 									<td>Qualitative</td>
 									<td style="background-color: #e41a1c; border-color: white; border: 2px; color: black;">5</td>
 									<td style="background-color: #377eb8; border-color: white; border: 2px;">1</td>
-									<td style="background-color: #4daf4a; border-color: white; border: 2px;">4</td>
+									<td style="background-color: #4daf4a; border-color: white; border: 2px; color: black;">4</td>
 									<td style="background-color: #984ea3; border-color: white; border: 2px;">2</td>
 									<td style="background-color: #ff7f00; border-color: white; border: 2px; color: black;">3</td>
 								</tr>
@@ -323,13 +325,13 @@
 									<td>Sequential</td>
 									<td style="background-color: #eff3ff; border-color: white; border: 1px; color: black;">1</td>
 									<td style="background-color: #bdd7e7; border-color: white; border: 1px; color: black;">2</td>
-									<td style="background-color: #6baed6; border-color: white; border: 1px;">3</td>
+									<td style="background-color: #6baed6; border-color: white; border: 1px; color: black;">3</td>
 									<td style="background-color: #3182bd; border-color: white; border: 1px;">4</td>
 									<td style="background-color: #08519c; border-color: white; border: 1px;">5</td>
 								</tr>
 								<tr>
 									<td>Divergent</td>
-									<td style="background-color: #e66101; border-color: white; border: 1px;">-2</td>
+									<td style="background-color: #e66101; border-color: white; border: 1px; color: black;">-2</td>
 									<td style="background-color: #fdb863; border-color: white; border: 1px; color: black;">-1</td>
 									<td style="background-color: #f7f7f7; border-color: white; border: 1px; color: black;">0</td>
 									<td style="background-color: #b2abd2; border-color: white; border: 1px; color: black;">1</td>
@@ -340,9 +342,10 @@
 
 						<aside class="notes">
 							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
+								<li>Qualitative visual scales are the visual analogs of nominal measurement scales.  The colors don't convey any information beyond identifying a group.</li>
+								<li>Sequential scales cover ordinal, intervallic, and ratio scales based on their construction.</li>
+								<li>It's easiest to think of sequential scales as being primarily ordinal in nature since it is difficult to generate a color ramp that allows users to consistently perceive equally spaced intervals.</li>
+								<li>Divergent scales are a special type of sequential scale used to show order of magnitude in two directions.</li>
 							</ul>
 						</aside>
 					</section>
@@ -447,7 +450,7 @@
 
 					<section>
 						<!-- Insert graph with ggplot2 aesthetics. -->
-						<img src="img/ggplot2-1.png" style="width: 90%;">
+						<img src="img/ggplot2-1.png" style="width: 90%;" alt="Example of Stata graph created with ggplot2 style aesthetics.">
 						<aside class="notes">
 							<ul>
 								<li>Do the aesthetics of this graph look familiar to any of you?</li>
@@ -459,7 +462,7 @@
 
 					<section>
 						<!-- Insert graph with ggplot2 aesthetics and tritanopia. -->
-						<img src="img/ggplot2-2.png" style="width: 90%;">
+						<img src="img/ggplot2-2.png" style="width: 90%;" alt="Example of Stata graph created with ggplot2 style aesthetics with colors simulated to show tritanopia.">
 						<aside class="notes">
 							<ul>
 								<li>Tritanopia is the least common of the color sight impairments with < 8% of the population experiencing this condition.</li>
@@ -471,7 +474,7 @@
 
 					<section>
 						<!-- Insert graph with ggplot2 aesthetics and protanopia. -->
-						<img src="img/ggplot2-3.png" style="width: 90%;">
+						<img src="img/ggplot2-3.png" style="width: 90%;" alt="Example of Stata graph created with ggplot2 style aesthetics with colors simulated to show protanopia">
 						<aside class="notes">
 							<ul>
 								<li>Protanopia is much more common and is probably one of the conditions most people think of when they hear the term "colorblindness."</li>
@@ -483,7 +486,7 @@
 
 					<section>
 						<!-- Insert graph with ggplot2 aesthetics and deuteranopia. -->
-						<img src="img/ggplot2-4.png" style="width: 90%;">
+						<img src="img/ggplot2-4.png" style="width: 90%;" alt="Example of Stata graph created with ggplot2 style aesthetics with colors simulated to show deuteranopia.">
 						<aside class="notes">
 							<ul>
 								<li>Deuteranopia is the other condition most people think about when they hear "colorblindness."</li>
@@ -495,7 +498,7 @@
 
 					<section>
 						<!-- Insert graph with ggplot2 aesthetics and achromatopsia. -->
-						<img src="img/ggplot2-5.png" style="width: 90%;">
+						<img src="img/ggplot2-5.png" style="width: 90%;" alt="Example of Stata graph created with ggplot2 style aesthetics with colors simulated to show achromatopsia.">
 						<aside class="notes">
 							<ul>
 								<li>True "colorblindness" or achromatopsia is a rare condition found in only 1 in 33,000 individuals.</li>
@@ -507,7 +510,7 @@
 
 					<section>
 						<!-- Insert graph with kelly22 based colors aesthetics. -->
-						<img src="img/kelly22-1.png" style="width: 90%;">
+						<img src="img/kelly22-1.png" style="width: 90%;" alt="Example of same Stata graph using Kelly's contrasting colors.">
 						<aside class="notes">
 							<ul>
 								<li>Note that while this visualization has more contrast in the colors, it isn't completely free of issues.</li>
@@ -516,7 +519,7 @@
 					</section>
 
 					<section>
-						<img src="img/kelly22-2.png" style="width: 90%;">
+						<img src="img/kelly22-2.png" style="width: 90%;" alt="Example of same Stata graph using Kelly's contrasting colors with colors simulated to show tritanopia.">
 						<aside class="notes">
 							<ul>
 								<li>Not terrible with tritanopia simulation, but there are still some places where it could be more clearly defined.</li>
@@ -525,7 +528,7 @@
 					</section>
 
 					<section>
-						<img src="img/kelly22-3.png" style="width: 90%;">
+						<img src="img/kelly22-3.png" style="width: 90%;" alt="Example of same Stata graph using Kelly's contrasting colors with colors simulated to show protanopia.">
 						<aside class="notes">
 							<ul>
 								<li>For individuals with protanopia it gets a bit worse, but </li>
@@ -534,7 +537,7 @@
 					</section>
 
 					<section>
-						<img src="img/kelly22-4.png" style="width: 90%;">
+						<img src="img/kelly22-4.png" style="width: 90%;" alt="Example of same Stata graph using Kelly's contrasting colors with colors simulated to show deuteranopia.">
 						<aside class="notes">
 							<ul>
 								<li>Notice how the 1st and 3rd values and 2nd and 5th values are starting to get closer in terms of color contrast.</li>
@@ -543,7 +546,7 @@
 					</section>
 
 					<section>
-						<img src="img/kelly22-5.png" style="width: 90%;">
+						<img src="img/kelly22-5.png" style="width: 90%;" alt="Example of same Stata graph using Kelly's contrasting colors with colors simulated to show achromatopsia.">
 						<aside class="notes">
 							<ul>
 								<li>Even though this set of colors is supposed rely on the highest possible color contrast between adjacent colors, it is nearly useless for individuals with achromatopsia.</li>
@@ -569,7 +572,12 @@
 							<li>Be mindful of color contrast issues for any text in your visualizations.</li>
 							<li>Use available tools/technologies to proof your visualizations prior to publication.</li>
 						</ul>
-
+						<aside class="notes">
+							<ul>
+								<li>Some technologies used to test for accessibility have known issues (e.g., computing color contrast ratios, etc...).</li>
+								<li>Be aware of known issues with accessibility testing software to find alternatives or test manually.</li>
+							</ul>
+						</aside>
 					</section>
 
 				</section>
@@ -589,8 +597,8 @@
 						</ul>
 						<aside class="notes">
 							<ul>
-								<li></li>
-								<li></li>
+								<li>The goal here is really to get users to think about how the message they are trying to convey should drive the selection of the type of graph they use.</li>
+								<li>Let participants know that there are going to be some more questions that follow to look at perceptual challenges that users face.</li>
 								<li></li>
 							</ul>
 						</aside>
@@ -772,51 +780,52 @@
 					</section>
 
 					<section>
-						<img src="img/bindInformationEx1.png" style="width: 90%;">
+						<img src="img/bindInformationEx1.png" style="width: 90%;" alt="Example of Fayette County Public Schools' data dashboard including the click for additional info illustrating binding info to visualization.">
 						<aside class="notes">
 							<ul>
-								<li></li>
-								<li></li>
+								<li>Each graph in our dashboard environment has one of these click here for additional info icons.</li>
+								<li>This is how we bind information to all of the visualizations.</li>
 							</ul>
 						</aside>
 					</section>
 
 					<section>
-						<img src="img/bindInformationEx2.png" style="width: 90%;">
+						<img src="img/bindInformationEx2.png" style="width: 90%;" alt="Example of Fayette County Public Schools' data dashboard after user clicks on the click for additional info element in the user interface.">
 						<aside class="notes">
 							<ul>
-								<li></li>
-								<li></li>
+								<li>This shows what the end user sees when they first click on the element.</li>
+								<li>We decided to make a tradeoff between expanding all the information by default and collapsing it.</li>
+								<li>The one section that is always available are the external resources that they can scroll to see.</li>
 							</ul>
 						</aside>
 					</section>
 
 					<section>
-						<img src="img/bindInformationEx3.png" style="width: 90%;">
+						<img src="img/bindInformationEx3.png" style="width: 90%;" alt="Example of Fayette County Public Schools' data dashboard after the user clicks on the click for additional info element and expands the what story is this chart telling section.">
 						<aside class="notes">
 							<ul>
-								<li></li>
-								<li></li>
+								<li>If its likely that some users may not interpret the graph consistently, give them some type of summary about what the general idea behind the graph is.</li>
+								<li>The summary doesn't need to be explicit, but can be a bit abstract to get the user some general parameters to use for interpretation.</li>
 							</ul>
 						</aside>
 					</section>
 
 					<section>
-						<img src="img/bindInformationEx4.png" style="width: 90%;">
+						<img src="img/bindInformationEx4.png" style="width: 90%;" alt="Example of Fayette County Public Schools' data dashboard after the user clicks on the click for additional info element and expands the how to use these data section.">
 						<aside class="notes">
 							<ul>
-								<li></li>
-								<li></li>
+								<li>We also provide some bounds to explain what reasonable and unreasonable interpretations of the visualizations could look like.</li>
+								<li>Having end points to reference like this can help end users guage how far away their interpretation is from either of the poles.</li>
 							</ul>
 						</aside>
 					</section>
 
 					<section>
-						<img src="img/bindInformationEx5.png" style="width: 90%;">
+						<img src="img/bindInformationEx5.png" style="width: 90%;" alt="Example of Fayette County Public Schools' data dashboard showing how external resources can also be bound to the visualization.">
 						<aside class="notes">
 							<ul>
-								<li></li>
-								<li></li>
+								<li>The external resources can help to make your visualizations more broadly useful since it can centralize knowledge/information locations.</li>
+								<li>I only pick on WIDA because their website can be challenging to navigate quickly/easily and educators rarely have loads of time to spare searching for materials when communicating with families/stakeholders.</li>
 							</ul>
 						</aside>
 					</section>
@@ -824,15 +833,14 @@
 					<section>
 						<h4>Takeaways</h4>
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li>Guides to help users interpret the visualizations can drive consistent use and interpretation.</li>
+							<li>Make the UI elements obvious so end users can find the information easily.</li>
+							<li>Make the information as proximal to the visualization w/o obscuring the view.</li>
+							<li>Bind external resources that are regularly sought to create additional value.</li>
 						</ul>
 						<aside class="notes">
 							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
+								<li>Summarizing the past few slides</li>
 							</ul>
 						</aside>
 					</section>
@@ -845,41 +853,61 @@
 				<section>
 
 					<section>
-						<h3>Wrap Up, Questions, &amp; Additional Resources</h3>
+						<h3>Wrap Up</h3>
 					</section>
 
 					<section>
 						<h4>Wrap Up</h4>
 						<ul>
-							<li></li>
-							<li></li>
-							<li></li>
+							<li>Make your visualizations accessible to all potential end users whenever possible.</li>
+							<li class="fragment" data-autoslide="3500">Reinforce the underlying meaning of the data with the visual mapping.</li>
+							<li class="fragment" data-autoslide="3500">Humans and visual comparison of areas don't mix.</li>
+							<li class="fragment" data-autoslide="3500">Empower the end users to make appropriate inference from your visualization with supporting materials.</li>
+							<li class="fragment">Create/implement visualization standards to provide end users with consistency.</li>
 						</ul>
 						<aside class="notes">
 							<ul>
-								<li></li>
+								<li>Make sure to mention not using dual axes or reverse axes, etc...</li>
 								<li></li>
 								<li></li>
 							</ul>
 						</aside>
 					</section>
 
+				</section>
+
+				<section>
+					<h4>Additional Resources</h4>
+
 					<section>
-						<h4>Additional Resources</h4>
+						<h5>Authors</h5>
 						<ul>
 							<li></li>
 							<li></li>
 							<li></li>
 						</ul>
-						<aside class="notes">
-							<ul>
-								<li></li>
-								<li></li>
-								<li></li>
-							</ul>
-						</aside>
 					</section>
+
+					<section>
+						<h5>Books</h5>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</section>
+
+					<section>
+						<h5>Other Resources</h5>
+						<ul>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</section>
+
 				</section>
+
 
 			</div>
 		</div>
